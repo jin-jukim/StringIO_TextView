@@ -46,6 +46,17 @@ namespace StringIO_TextView
             }
             
         }
+
+        private void txtEdit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13) // //엔터 키를 누를 때
+            {// 아스키코드
+                if (TextCheck())
+                {
+                    this.lblResult.Text = this.OrgStr + this.txtEdit.Text;
+                }
+            }
+        }
     }
 }
 
