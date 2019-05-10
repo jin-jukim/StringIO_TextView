@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textEdit = new System.Windows.Forms.TextBox();
+            this.txtEdit = new System.Windows.Forms.TextBox();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.lblResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textEdit
+            // txtEdit
             // 
-            this.textEdit.Location = new System.Drawing.Point(12, 12);
-            this.textEdit.Name = "textEdit";
-            this.textEdit.Size = new System.Drawing.Size(188, 21);
-            this.textEdit.TabIndex = 0;
+            this.txtEdit.Location = new System.Drawing.Point(12, 12);
+            this.txtEdit.Name = "txtEdit";
+            this.txtEdit.Size = new System.Drawing.Size(188, 21);
+            this.txtEdit.TabIndex = 0;
             // 
             // buttonEdit
             // 
@@ -49,6 +49,7 @@
             this.buttonEdit.TabIndex = 1;
             this.buttonEdit.Text = "입력";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // lblResult
             // 
@@ -67,11 +68,12 @@
             this.ClientSize = new System.Drawing.Size(212, 195);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.buttonEdit);
-            this.Controls.Add(this.textEdit);
+            this.Controls.Add(this.txtEdit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "문자 입출력";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,7 +81,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textEdit;
+        private System.Windows.Forms.TextBox txtEdit;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Label lblResult;
     }
