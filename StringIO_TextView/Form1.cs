@@ -51,6 +51,7 @@ namespace StringIO_TextView
         {
             if (e.KeyChar == 13) // //엔터 키를 누를 때
             {// 아스키코드
+                e.Handled = true;//엔터칠때 소리가 나는데 나지 않게 하는 것
                 if (TextCheck())
                 {
                     this.lblResult.Text = this.OrgStr + this.txtEdit.Text;
